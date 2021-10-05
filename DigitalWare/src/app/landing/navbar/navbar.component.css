@@ -1,0 +1,9 @@
+.nav-link {
+  font-family: "Montserrat", "Segoe UI", "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !important;
+  color: black !important;
+}
+
+.nav-link:hover {
+  color: #1abc9c !important;
+}
+
