@@ -1,0 +1,128 @@
+{
+    "Reservas": [
+        {
+            "idPadre": 1,
+            "nombreApellido": "Carlos Jaramillo",
+            "numeroCedula": 1220849392,
+            "numeroCelular": 3104532311,
+            "LugarDestino": "Embraer EMB 312 Tucano",
+            "estado": "Viajo"
+        },
+        {
+            "idPadre": 1,
+            "nombreApellido": "Jairo sanabria",
+            "numeroCedula": 1220849392,
+            "numeroCelular": 3104532311,
+            "LugarDestino": "T-6C Texan II",
+            "estado": "Cancelo"
+        },
+        {
+            "idPadre": 1,
+            "nombreApellido": "Fabian Lasso",
+            "numeroCedula": 1220849392,
+            "numeroCelular": 3104532311,
+            "LugarDestino": "T-90 Calima",
+            "estado": "Viajo"
+        },
+        {
+            "idPadre": 1,
+            "nombreApellido": "David Prieto",
+            "numeroCedula": 1220849392,
+            "numeroCelular": 3104532311,
+            "LugarDestino": "Cessna 172",
+            "estado": "Candelo"
+        }
+    ],
+    "ListAeronaves": [
+        {
+            "idPadre": 1,
+            "nombre": "IAI Kfir",
+            "imagen": "assets/images/IAIKfir.png",
+            "origen": "Israel",
+            "tipo": "Caza polivalente/Cazabombardero",
+            "capacidad": "2",
+            "precio": "5000000",
+            "rentado": false
+        },
+        {
+            "idPadre": 2,
+            "nombre": "Embraer EMB 314 Super Tucano",
+            "imagen": "assets/images/Embraer.png",
+            "origen": "Brasil",
+            "tipo": "Ataque a tierra/Contrainsurgencia",
+            "capacidad": "1",
+            "precio": "3000000",
+            "rentado": false
+        },
+        {
+            "idPadre": 3,
+            "nombre": "Cessna A-37 Dragonfly",
+            "imagen": "assets/images/Cessna.png",
+            "origen": "Estados Unidos",
+            "tipo": "Ataque a tierra/Contrainsurgencia",
+            "capacidad": "1",
+            "precio": "8000000",
+            "rentado": false
+        },
+        {
+            "idPadre": 4,
+            "nombre": "Basler BT-67 Fantasma",
+            "imagen": "assets/images/Basler.png",
+            "origen": "Estados Unidos",
+            "tipo": "Avión de Inteligencia y ataque a tierra",
+            "capacidad": "50",
+            "precio": "12000000",
+            "rentado": false
+        },
+        {
+            "idPadre": 5,
+            "nombre": "T-6C Texan II",
+            "imagen": "assets/images/T-6C.png",
+            "origen": "Estados Unidos",
+            "tipo": "Avión de entrenamiento",
+            "capacidad": "2",
+            "precio": "2000000",
+            "rentado": false
+        },
+        {
+            "idPadre": 6,
+            "nombre": "T-90 Calima",
+            "imagen": "assets/images/T-90.png",
+            "origen": "Colombia",
+            "tipo": "Avión de entrenamiento",
+            "capacidad": "1",
+            "precio": "1000000",
+            "rentado": false
+        },
+        {
+            "idPadre": 7,
+            "nombre": "Schweizer SA2-37B Vampiro",
+            "imagen": "assets/images/Schweizer.png",
+            "origen": "Estados Unidos",
+            "tipo": "Avión de Inteligencia",
+            "capacidad": "1",
+            "precio": "4000000",
+            "rentado": false
+        },
+        {
+            "idPadre": 8,
+            "nombre": "Citation SR-560 Tracker",
+            "imagen": "assets/images/Citation.png",
+            "origen": "Estados Unidos",
+            "tipo": "Avión de Inteligencia",
+            "capacidad": "6",
+            "precio": "13000000",
+            "rentado": false
+        },
+        {
+            "idPadre": 9,
+            "nombre": "Aeroturbo Commander",
+            "imagen": "assets/images/Aeroturbo.png",
+            "origen": "Estados Unidos",
+            "tipo": "Avión de Inteligencia",
+            "capacidad": "10",
+            "precio": "50000000",
+            "rentado": false
+        }
+    ]
+}

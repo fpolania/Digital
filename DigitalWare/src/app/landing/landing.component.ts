@@ -7,12 +7,14 @@ import { Router } from '@angular/router';
   styleUrls: ['./landing.component.css']
 })
 export class LandingComponent implements OnInit {
-
   constructor(private readonly route: Router) { }
 
   ngOnInit(): void {
   }
   verListaReservaciones(): void {
     this.route.navigate(['/resavaciones']);
+  }
+  realizarReserva(): void {
+    this.route.navigate(['/reservar']);
   }
 }

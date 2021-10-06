@@ -3,7 +3,10 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  DigitalKeyApp: 'yAsywW3vXKwwCrxwA/BsaZx93qxWBQYlam5iYKLc+6M=',
+  DigitalHexIVCrypto: 'a884a7edd5d06a48d6da9ad11fd36a75',
+  baseUrl: ''
 };
 
 /*

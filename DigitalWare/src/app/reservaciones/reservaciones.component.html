@@ -1,1 +1,41 @@
-<p>reservaciones works!</p>
+<app-navbar></app-navbar>
+<div class="container" style="margin-top: 1%;">
+    <div class="accordion" id="accordionExample">
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingOne">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
+                    aria-expanded="true" aria-controls="collapseOne">
+                    Lista De Reservaciones
+                </button>
+            </h2>
+            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th scope="col">Aeronave</th>
+                                <th scope="col">Nombre Completo</th>
+                                <th scope="col">Origen</th>
+                                <th scope="col">Destino</th>
+                                <th scope="col">Capacidad Pasajeros</th>
+                                <th scope="col">Fecha Salida</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let item of this.listReservas">
+                                <th scope="row">{{item.nave}} </th>
+                                <td>{{item.nombreApellidos}} </td>
+                                <td>{{item.origen}} </td>
+                                <td>{{item.destino}} </td>
+                                <td>{{item.pasajeros}} </td>
+                                <td>{{item.salida}} </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

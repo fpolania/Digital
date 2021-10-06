@@ -1,0 +1,149 @@
+<app-navbar></app-navbar>
+<div class="container" style="margin-top: 1%;">
+    <div class="accordion" id="accordionExample">
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingOne">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
+                    aria-expanded="true" aria-controls="collapseOne">
+                    ¿A donde quieres ir hoy?
+                </button>
+            </h2>
+            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <form [formGroup]="reservaForm" *ngIf="verFormulario">
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <label for="exampleInputEmail1" class="form-label"><strong>Origen</strong> </label>
+                                <input type="text" class="form-control" id="exampleInputEmail1" name="origen"
+                                    formControlName="origen" placeholder="Digite Origen"
+                                    [class.is-invalid]="submit && reservaControl.origen.errors">
+                                <div *ngIf="submit && reservaControl.origen.errors" class="invalid-feedback">
+                                    <div *ngIf="reservaControl.origen.errors?.required">
+                                        Requerido
+                                    </div>
+                                    <div *ngIf="reservaControl.origen.errors?.pattern">
+                                        Campo de texto
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-3">
+                                <label for="exampleInputEmail1" class="form-label"><strong>Destino</strong></label>
+                                <input type="text" class="form-control" id="exampleInputEmail1" name="destino"
+                                    formControlName="destino" placeholder="Digite Destino"
+                                    [class.is-invalid]="submit && reservaControl.destino.errors">
+                                <div *ngIf="submit && reservaControl.destino.errors" class="invalid-feedback">
+                                    <div *ngIf="reservaControl.destino.errors?.required">
+                                        Requerido
+                                    </div>
+                                    <div *ngIf="reservaControl.destino.errors?.pattern">
+                                        Campo de texto
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-3">
+                                <label for="exampleInputEmail1" class="form-label"><strong>Fecha de
+                                        salida</strong></label>
+                                <input type="date" class="form-control" id="start" name="trip-start" min="2018-01-01"
+                                    max="2021-12-31" name="salida" formControlName="salida"
+                                    [class.is-invalid]="submit && reservaControl.salida.errors">
+                                <div *ngIf="submit && reservaControl.salida.errors" class="invalid-feedback">
+                                    <div *ngIf="reservaControl.salida.errors?.required">
+                                        Requerido
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-3">
+                                <label for="exampleInputEmail1" class="form-label"><strong>Pasajeros</strong></label>
+                                <input type="text" class="form-control" id="exampleInputEmail1" name="pasajeros"
+                                    formControlName="pasajeros" placeholder="Número Pasajeros" >
+
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <label for="exampleInputEmail1" class="form-label"><strong>Nombre y
+                                        apellidos</strong></label>
+                                <input type="text" class="form-control" id="exampleInputEmail1" name="nombreApellidos"
+                                    formControlName="nombreApellidos" placeholder="Ingrese Datos"
+                                    [class.is-invalid]="submit && reservaControl.nombreApellidos.errors">
+                                <div *ngIf="submit && reservaControl.nombreApellidos.errors" class="invalid-feedback">
+                                    <div *ngIf="reservaControl.nombreApellidos.errors?.required">
+                                        Requerido
+                                    </div>
+                                    <div *ngIf="reservaControl.nombreApellidos.errors?.pattern">
+                                        Campo de texto
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-3">
+                                <label for="exampleInputEmail1" class="form-label"><strong>Correo</strong></label>
+                                <input type="text" class="form-control" id="exampleInputEmail1" name="correo"
+                                    formControlName="correo" placeholder="Ingrese Correo"
+                                    [class.is-invalid]="submit && reservaControl.correo.errors">
+                                <div *ngIf="submit && reservaControl.correo.errors" class="invalid-feedback">
+                                    <div *ngIf="reservaControl.correo.errors?.required">
+                                        Requerido
+                                    </div>
+                                    <div *ngIf="reservaControl.correo.errors?.email">
+                                        Campo invalido
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-3">
+                                <label for="exampleInputEmail1" class="form-label"><strong>Aeronave</strong></label>
+                                <input type="text" class="form-control" id="exampleInputEmail1" name="nave"
+                                    formControlName="nave">
+                            </div>
+                        </div>
+                        <div class="modal-footer mt-3">
+                            <button type="button" class="btn btn-outline-secondary"
+                                (click)="limpiarForm()">Limpiar</button>
+                            <button type="submit" class="btn btn-outline-success"
+                                (click)="guardarReservacion()">Success</button>
+                        </div>
+                    </form>
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <table class="table table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Aeronave</th>
+                                        <th scope="col">Imagen</th>
+                                        <th scope="col">Origen</th>
+                                        <th scope="col">Tipo</th>
+                                        <th scope="col">Capacidad Personas</th>
+                                        <th scope="col">Precio</th>
+                                        <th scope="col">Rentar</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr *ngFor="let item of listAeronaves">
+                                        <th scope="row">{{item.nombre}} </th>
+                                        <td>
+                                            <img [src]="item.imagen" class="card-img-top" alt="...">
+                                        </td>
+                                        <td>{{item.origen}}</td>
+                                        <td>{{item.tipo}}</td>
+                                        <td>{{item.capacidad}}</td>
+                                        <td>{{item.precio | currency}}</td>
+                                        <td>
+                                            <button type="button" class="btn btn-primary"
+                                                (click)="rentarAeronaves(item)">
+                                                <i class="bi bi-calendar-plus"></i>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+</div>
